@@ -1,26 +1,115 @@
-<html>
-  <head>
-    <title>Sample "Hello, World" Application</title>
-  </head>
-  <body bgcolor=white>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Xinyang Geng</title>
 
-    <table border="0" cellpadding="10">
-      <tr>
-        <td>
-          <img src="images/springsource.png">
-        </td>
-        <td>
-          <h1>Sample "Hello, World" Application</h1>
-        </td>
-      </tr>
-    </table>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="blue" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Xinyang Geng</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-    <p>This is the home page for the HelloWorld Web application. </p>
-    <p>To prove that they work, you can execute either of the following links:
-    <ul>
-      <li>To a <a href="hello.jsp">JSP page</a>.
-      <li>To a <a href="hello">servlet</a>.
-    </ul>
+      <!--<ul id="nav-mobile" class="side-nav">-->
+      <!--  <li><a href="#">Navbar Link</a></li>-->
+      <!--</ul>-->
+      <!--<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="about">
+    <div class="container">
+      <br><br>
+      <h3 class="header center">About Me</h3>
+      <div class="row">
+        <!--<h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>-->
+        <p class="col s8 offset-s2 caption">
+          I'm a fourth year undergradute student studying computer science and statistics at University of California, Berkeley.
+          I work with Professor Pieter Abbeel, Professor Sergey Levine and Professor Alexei Efros as an undergraduate research assistant 
+          in the Berkeley Artificial Intelligence Research (BAIR) Lab.
+        </p>
+      </div>
+      <div class="row center">
+        <a href="https://www.linkedin.com/in/xygeng" id="download-button" class="waves-effect waves-light btn">LinkedIn</a>
+        <a href="https://github.com/young-geng" id="download-button" class="waves-effect waves-light btn">Github</a>
+        <a href="files/Xinyang_Geng_CV.pdf" id="download-button" class="waves-effect waves-light btn">CV</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section" id="publications">
+
+      <h3 class="header center">Publications</h3>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="images/superball.png", style="width: 300px">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5 class="center">Deep Reinforcement Learning for Tensegrity Robot Locomotion</h5>
+              <p class="center"><b>Xinyang Geng</b>*, Marvin Zhang*, Jonathan Bruce*, Ken Caluwaerts, Massimo Vespignani, Vytas SunSpiral, Pieter Abbeel, Sergey Levine</p>
+              <p class="light center">In review for ICRA, 2017.</p>
+              <p class="light center">Also, in NIPS Deep Reinforcement Learning Workshop, 2016.</p>
+              <br>
+              <p>
+                We collaborated with NASA Ames to explore the challenges associated with learning locomotion
+                strategies for tensegrity robots, a class of compliant robots that hold promise for future planetary exploration missions.
+                We devised a novel extension of mirror descent guided policy search to learn locomotion gaits for the SUPERball
+                tensegrity robot, both in simulationand on the physical robot.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="http://rll.berkeley.edu/drl_tensegrity/">Project Website</a>
+            </div>
+            <div class="card-action">
+              <a href="https://arxiv.org/abs/1609.09049">arXiv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer blue" id="contact">
+    <div class="container">
+      <div class="row">
+          <h5 class="white-text">Contact</h5>
+          <p class="grey-text text-lighten-4">Email: young.gengxy AT gmail.com</p>
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
 
   </body>
 </html>

@@ -1,2 +1,1 @@
-# young-geng.github.io
-Personal homepage
+# Personal home page
