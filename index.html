@@ -19,10 +19,12 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <!--<ul id="nav-mobile" class="side-nav">-->
-      <!--  <li><a href="#">Navbar Link</a></li>-->
-      <!--</ul>-->
-      <!--<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
   <div class="section no-pad-bot" id="about">
@@ -48,7 +50,7 @@
       <div class="row center">
         <a href="https://scholar.google.com/citations?user=vYougn0AAAAJ" target="_blank" id="download-button" class="waves-effect waves-light btn">Google Scholar</a>
         <a href="https://github.com/young-geng" target="_blank" id="download-button" class="waves-effect waves-light btn">Github</a>
-        <a href="https://www.linkedin.com/in/xygeng" target="_blank" id="download-button" class="waves-effect waves-light btn">LinkedIn</a>
+        <!-- <a href="https://www.linkedin.com/in/xygeng" target="_blank" id="download-button" class="waves-effect waves-light btn">LinkedIn</a> -->
       </div>
       <br><br>
 
@@ -65,6 +67,42 @@
       <div class="row">
         <div class="card horizontal">
           <div class="card-image">
+            <img src="images/ddl.gif", style="width: 300px">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5 class="center">Dynamical Distance Learning for Unsupervised and Semi-Supervised Skill Discovery </h5>
+              <p class="center">Kristian Hartikainen, Xinyang Geng, Tuomas Haarnoja, Sergey Levine</p>
+              <br>
+              <p>
+                Reinforcement learning requires manual specification of a reward function to learn
+                a task. While in principle this reward function only needs to specify the task
+                goal, in practice reinforcement learning can be very time-consuming or even infeasible unless the reward function is shaped so as to provide a smooth gradient
+                towards a successful outcome. This shaping is difficult to specify by hand, particularly when the task is learned from raw observations, such as images. In this
+                paper, we study how we can automatically learn dynamical distances: a measure of the expected number of time steps to reach a given goal state from any
+                other state. These dynamical distances can be used to provide well-shaped reward functions for reaching new goals, making it possible to learn complex tasks
+                efficiently. We show that dynamical distances can be used in a semi-supervised
+                regime, where unsupervised interaction with the environment is used to learn the
+                dynamical distances, while a small amount of preference supervision is used to
+                determine the task goal, without any manually engineered reward function or goal
+                examples. We evaluate our method both on a real-world robot and in simulation.
+                We show that our method can learn to turn a valve with a real-world 9-DoF hand,
+                using raw image observations and just ten preference labels, without any other
+                supervision.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://sites.google.com/view/dynamical-distance-learning">Project Website</a>
+              <a href="https://arxiv.org/abs/1907.08225">arXiv</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-image">
             <img src="images/maze_goal.png", style="width: 300px">
           </div>
           <div class="card-stacked">
@@ -72,19 +110,32 @@
               <h5 class="center">Automatic Goal Generation for Reinforcement Learning Agents</h5>
               <p class="center">Carlos Florensa*, David Held*, Xinyang Geng*, Pieter Abbeel</p>
               <p class="light center">In ICML, 2018.</p>
-              <p class="light center">Also in Deep Reinforcement Learning Symposium, NIPS 2017</p>
               <br>
               <p>
-                We propose a method that allows an agent to automatically discover the range of tasks that it is
-                capable of performing in its environment. We use a generator network to propose tasks for the
-                agent to try to achieve, specified as sets of goal states.
+                Reinforcement learning (RL) is a powerful technique to train an agent to perform a task; however,
+                an agent that is trained using RL is only capable
+                of achieving the single task that is specified via its
+                reward function. Such an approach does not scale
+                well to settings in which an agent needs to perform a diverse set of tasks, such as navigating to
+                varying positions in a room or moving objects to
+                varying locations. Instead, we propose a method
+                that allows an agent to automatically discover the
+                range of tasks that it is capable of performing
+                in its environment. We use a generator network
+                to propose tasks for the agent to try to accomplish, each task being specified as reaching a certain parametrized subset of the state-space. The
+                generator network is optimized using adversarial
+                training to produce tasks that are always at the
+                appropriate level of difficulty for the agent, thus
+                automatically producing a curriculum. We show
+                that, by using this framework, an agent can efficiently and automatically learn to perform a wide
+                set of tasks without requiring any prior knowledge of its environment, even when only sparse
+                rewards are available.
               </p>
             </div>
             <div class="card-action">
               <a href="https://sites.google.com/view/goalgeneration4rl">Project Website</a>
-            </div>
-            <div class="card-action">
               <a href="https://arxiv.org/abs/1705.06366">arXiv</a>
+              <a href="https://github.com/florensacc/rllab-curriculum">Code</a>
             </div>
           </div>
         </div>
@@ -103,16 +154,23 @@
               <p class="light center">In SIGGRAPH 2017.</p>
               <br>
               <p>
-                We propose a deep learning approach for user-guided image colorization. We system directly
-                maps a grayscale image, along with sparse, local user “hints” to an output colorization
-                with a deep convolutional neural network.
+                We propose a deep learning approach for user-guided image colorization.
+                The system directly maps a grayscale image, along with sparse, local user
+                “hints" to an output colorization with a Convolutional Neural Network (CNN).
+                Rather than using hand-defined rules, the network propagates user edits by
+                fusing low-level cues along with high-level semantic information, learned
+                from large-scale data. We train on a million images, with simulated user
+                inputs. To guide the user towards efficient input selection, the system recommends likely colors based on the input image and current user inputs. The colorization is performed in a single feed-forward pass, enabling real-time use.
+                Even with randomly simulated user inputs, we show that the proposed system helps novice users quickly create realistic colorizations, and offers large
+                improvements in colorization quality with just a minute of use. In addition,
+                we demonstrate that the framework can incorporate other user “hints" to
+                the desired colorization, showing an application to color histogram transfer.
               </p>
             </div>
             <div class="card-action">
               <a href="https://richzhang.github.io/ideepcolor/">Project Website</a>
-            </div>
-            <div class="card-action">
               <a href="https://arxiv.org/abs/1705.02999">arXiv</a>
+              <a href="https://github.com/florensacc/rllab-curriculum">Code</a>
             </div>
           </div>
         </div>
@@ -129,20 +187,33 @@
               <h5 class="center">Deep Reinforcement Learning for Tensegrity Robot Locomotion</h5>
               <p class="center">Marvin Zhang*, Xinyang Geng*, Jonathan Bruce*, Ken Caluwaerts, Massimo Vespignani, Vytas SunSpiral, Pieter Abbeel, Sergey Levine</p>
               <p class="light center">In ICRA, 2017.</p>
-              <p class="light center">Also in Deep Reinforcement Learning Workshop, NIPS 2016.</p>
               <br>
               <p>
-                We collaborated with NASA Ames to explore the challenges associated with learning locomotion
-                strategies for tensegrity robots, a class of compliant robots that hold promise for future planetary exploration missions.
-                We devised a novel extension of mirror descent guided policy search to learn locomotion gaits for the SUPERball
-                tensegrity robot, both in simulationand on the physical robot.
+                Tensegrity robots, composed of rigid rods connected by elastic cables, have a number of unique properties
+                that make them appealing for use as planetary exploration
+                rovers. However, control of tensegrity robots remains a difficult
+                problem due to their unusual structures and complex dynamics.
+                In this work, we show how locomotion gaits can be learned
+                automatically using a novel extension of mirror descent guided
+                policy search (MDGPS) applied to periodic locomotion movements, and we demonstrate the effectiveness of our approach on
+                tensegrity robot locomotion. We evaluate our method with realworld and simulated experiments on the SUPERball tensegrity
+                robot, showing that the learned policies generalize to changes
+                in system parameters, unreliable sensor measurements, and
+                variation in environmental conditions, including varied terrains
+                and a range of different gravities. Our experiments demonstrate
+                that our method not only learns fast, power-efficient feedback
+                policies for rolling gaits, but that these policies can succeed
+                with only the limited onboard sensing provided by SUPERball’s
+                accelerometers. We compare the learned feedback policies to
+                learned open-loop policies and hand-engineered controllers, and
+                demonstrate that the learned policy enables the first continuous,
+                reliable locomotion gait for the real SUPERball robot.
               </p>
             </div>
             <div class="card-action">
               <a href="http://rll.berkeley.edu/drl_tensegrity/">Project Website</a>
-            </div>
-            <div class="card-action">
               <a href="https://arxiv.org/abs/1609.09049">arXiv</a>
+              <a href="https://github.com/young-geng/gps_superball_public">Code</a>
             </div>
           </div>
         </div>
