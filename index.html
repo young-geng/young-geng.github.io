@@ -64,15 +64,215 @@
       <h3 class="header center">Publications</h3>
       <!--   Icon Section   -->
 
+
       <div class="row">
         <div class="card horizontal">
-          <div class="card-image">
-            <img src="images/mier.png", style="width: 300px">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5 class="center">Offline Q-Learning on Diverse Multi-Task Data Both Scales And Generalizes</h5>
+              <p class="center">Aviral Kumar*, Rishabh Agarwal*, Xinyang Geng, George Tucker, Sergey Levine</p>
+              <br>
+              <p class="center"><img src="images/sql.png", style="width: 65%"></p>
+              <br>
+              <p>
+                The potential of offline reinforcement learning (RL) is that high-capacity
+                models trained on large, heterogeneous datasets can lead to agents that
+                generalize broadly, analogously to similar advances in vision and NLP. However,
+                recent works argue that offline RL methods encounter unique challenges to
+                scaling up model capacity. Drawing on the learnings from these works, we re-
+                examine previous design choices and find that with appropriate choices:
+                ResNets, cross-entropy based distributional backups, and feature normalization,
+                offline Q-learning algorithms exhibit strong performance that scales with model
+                capacity. Using multi-task Atari as a testbed for scaling and generalization,
+                we train a single policy on 40 games with near-human performance using up-to 80
+                million parameter networks, finding that model performance scales favorably
+                with capacity. In contrast to prior work, we extrapolate beyond dataset
+                performance even when trained entirely on a large (400M transitions) but highly
+                suboptimal dataset (51% human-level performance). Compared to return-
+                conditioned supervised approaches, offline Q-learning scales similarly with
+                model capacity and has better performance, especially when the dataset is
+                suboptimal. Finally, we show that offline Q-learning with a diverse dataset is
+                sufficient to learn powerful representations that facilitate rapid transfer to
+                novel games and fast online learning on new variations of a training game,
+                improving over existing state-of-the-art representation learning approaches.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://arxiv.org/abs/2211.15144">arXiv</a>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5 class="center">FCM: Forgetful Causal Masking Makes Causal Language Models Better Zero-Shot Learners</h5>
+              <p class="center">Hao Liu*, Xinyang Geng*, Lisa Lee, Igor Mordatch, Sergey Levine, Sharan Narang, Pieter Abbeel</p>
+              <br>
+              <p class="center"><img src="images/fcm.png", style="width: 75%"></p>
+              <br>
+              <p>
+                Large language models (LLM) trained using the next-token-prediction objective,
+                such as GPT3 and PaLM, have revolutionized natural language processing in
+                recent years by showing impressive zero-shot and few-shot capabilities across a
+                wide range of tasks. In this work, we propose a simple technique that
+                significantly boosts the performance of LLMs without adding computational cost.
+                Our key observation is that, by performing the next token prediction task with
+                randomly selected past tokens masked out, we can improve the quality of the
+                learned representations for downstream language understanding tasks. We
+                hypothesize that randomly masking past tokens prevents over-attending to recent
+                tokens and encourages attention to tokens in the distant past. By randomly
+                masking input tokens in the PaLM model, we show that we can significantly
+                improve 1B and 8B PaLM's zero-shot performance on the SuperGLUE benchmark from
+                55.7 to 59.2 and from 61.6 to 64.0, respectively. Our largest 8B model matches
+                the score of PaLM with an average score of 64, despite the fact that PaLM is
+                trained on a much larger dataset (780B tokens) of high-quality conversation and
+                webpage data, while ours is trained on the smaller C4 dataset (180B tokens).
+                Experimental results show that our method also improves PaLM's zero and few-
+                shot performance on a diverse suite of tasks, including commonsense reasoning,
+                natural language inference and cloze completion. Moreover, we show that our
+                technique also helps representation learning, significantly improving PaLM's
+                finetuning results.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://arxiv.org/abs/2210.13432">arXiv</a>
+              <a href="https://github.com/young-geng/EasyLM">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5 class="center">Multimodal Masked Autoencoders Learn Transferable Representations</h5>
+              <p class="center">Xinyang Geng*, Hao Liu*, Lisa Lee, Dale Schuurams, Sergey Levine, Pieter Abbeel</p>
+              <br>
+              <p class="center"><img src="images/m3ae.png", style="width: 70%"></p>
+              <br>
+              <p>
+                Building scalable models to learn from diverse, multimodal data remains an open
+                challenge. For vision-language data, the dominant approaches are based on
+                contrastive learning objectives that train a separate encoder for each
+                modality. While effective, contrastive learning approaches introduce sampling
+                bias depending on the data augmentations used, which can degrade performance on
+                downstream tasks. Moreover, these methods are limited to paired image-text
+                data, and cannot leverage widely-available unpaired data. In this paper, we
+                investigate whether a large multimodal model trained purely via masked token
+                prediction, without using modality-specific encoders or contrastive learning,
+                can learn transferable representations for downstream tasks. We propose a
+                simple and scalable network architecture, the Multimodal Masked Autoencoder (
+                M3AE), which learns a unified encoder for both vision and language data via
+                masked token prediction. We provide an empirical study of M3AE trained on a
+                large-scale image-text dataset, and find that M3AE is able to learn
+                generalizable representations that transfer well to downstream tasks.
+                Surprisingly, we find that M3AE benefits from a higher text mask ratio (50-
+                90%), in contrast to BERT whose standard masking ratio is 15%, due to the joint
+                training of two data modalities. We also provide qualitative analysis showing
+                that the learned representation incorporates meaningful information from both
+                image and language. Lastly, we demonstrate the scalability of M3AE with larger
+                model size and training time, and its flexibility to train on both paired image-
+                text data as well as unpaired data.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://arxiv.org/abs/2205.14204">arXiv</a>
+              <a href="https://github.com/young-geng/m3ae_public">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5 class="center">Conservative objective models for effective offline model-based optimization</h5>
+              <p class="center">Brandon Trabucco*, Aviral Kumar*, Xinyang Geng, Sergey Levine</p>
+              <br>
+              <p class="center"><img src="images/coms.png", style="width: 70%"></p>
+              <br>
+              <p>
+                In this paper, we aim to solve data-driven model-based optimization (MBO)
+                problems, where the goal is to find a design input that maximizes an unknown
+                objective function provided access to only a static dataset of inputs and their
+                corresponding objective values. Such data-driven optimization procedures are
+                the only practical methods in many real-world domains where active data
+                collection is expensive (eg, when optimizing over proteins) or dangerous (eg,
+                when optimizing over aircraft designs, actively evaluating malformed aircraft
+                designs is unsafe). Typical methods for MBO that optimize the input against a
+                learned model of the unknown score function are affected by erroneous
+                overestimation in the learned model caused due to distributional shift, that
+                drives the optimizer to low-scoring or invalid inputs. To overcome this, we
+                propose conservative objective models (COMs), a method that learns a model of
+                the objective function which lower bounds the actual value of the ground-truth
+                objective on out-of-distribution inputs and uses it for optimization. In
+                practice, COMs outperform a number existing methods on a wide range of MBO
+                problems, including optimizing controller parameters, robot morphologies, and
+                superconducting materials.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://arxiv.org/abs/2107.06882">arXiv</a>
+              <a href="https://github.com/rail-berkeley/design-baselines">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5 class="center">Design-bench: Benchmarks for data-driven offline model-based optimization</h5>
+              <p class="center">Brandon Trabucco*, Xinyang Geng*, Aviral Kumar, Sergey Levine</p>
+              <br>
+              <p class="center"><img src="images/design_bench.png", style="width: 70%"></p>
+              <br>
+              <p>
+                Black-box model-based optimization (MBO) problems, where the goal is to find a
+                design input that maximizes an unknown objective function, are ubiquitous in a
+                wide range of domains, such as the design of proteins, DNA sequences, aircraft,
+                and robots. Solving model-based optimization problems typically requires
+                actively querying the unknown objective function on design proposals, which
+                means physically building the candidate molecule, aircraft, or robot, testing
+                it, and storing the result. This process can be expensive and time consuming,
+                and one might instead prefer to optimize for the best design using only the
+                data one already has. This setting -- called offline MBO -- poses substantial
+                and different algorithmic challenges than more commonly studied online
+                techniques. A number of recent works have demonstrated success with offline MBO
+                for high-dimensional optimization problems using high-capacity deep neural
+                networks. However, the lack of standardized benchmarks in this emerging field
+                is making progress difficult to track. To address this, we present Design-
+                Bench, a benchmark for offline MBO with a unified evaluation protocol and
+                reference implementations of recent methods. Our benchmark includes a suite of
+                diverse and realistic tasks derived from real-world optimization problems in
+                biology, materials science, and robotics that present distinct challenges for
+                offline MBO. Our benchmark and reference implementations are released at
+                github.com/rail-berkeley/design-bench and github.com/rail-berkeley/design-
+                baselines.
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="https://arxiv.org/abs/2202.08450">arXiv</a>
+              <a href="https://github.com/rail-berkeley/design-bench">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
               <h5 class="center">Meta-Reinforcement Learning Robust to Distributional Shift via Model Identification and Experience Relabeling </h5>
               <p class="center">Russell Mendonca*, Xinyang Geng*, Chelsea Finn, Sergey Levine</p>
+              <br>
+              <p class="center"><img src="images/mier.png", style="width: 90%"></p>
               <br>
               <p>
                 Reinforcement learning algorithms can acquire policies for complex tasks autonomously. However, the
@@ -99,13 +299,12 @@
 
       <div class="row">
         <div class="card horizontal">
-          <div class="card-image">
-            <img src="images/relabel.png", style="width: 300px">
-          </div>
           <div class="card-stacked">
             <div class="card-content">
               <h5 class="center">Rewriting History with Inverse RL: Hindsight Inference for Policy Improvement</h5>
               <p class="center">Benjamin Eysenbach*, Xinyang Geng*, Sergey Levine, Ruslan Salakhutdinov</p>
+              <br>
+              <p class="center"><img src="images/relabel.png", style="width: 70%"></p>
               <br>
               <p>
                 Multi-task reinforcement learning (RL) aims to simultaneously learn policies for solving many tasks.
@@ -129,14 +328,13 @@
 
       <div class="row">
         <div class="card horizontal">
-          <div class="card-image">
-            <img src="images/ddl.gif", style="width: 300px">
-          </div>
           <div class="card-stacked">
             <div class="card-content">
               <h5 class="center">Dynamical Distance Learning for Unsupervised and Semi-Supervised Skill Discovery </h5>
               <p class="center">Kristian Hartikainen, Xinyang Geng, Tuomas Haarnoja, Sergey Levine</p>
               <p class="light center">In ICLR, 2020.</p>
+              <br>
+              <p class="center"><img src="images/ddl.gif", style="width: 25%"></p>
               <br>
               <p>
                 Reinforcement learning requires manual specification of a reward function to learn
@@ -165,14 +363,13 @@
 
       <div class="row">
         <div class="card horizontal">
-          <div class="card-image">
-            <img src="images/curvature_regularization.png", style="width: 300px">
-          </div>
           <div class="card-stacked">
             <div class="card-content">
               <h5 class="center">Improved Generalization with Curvature Regularization </h5>
               <p class="center">Xinyang Geng, Lechao Xiao, Hossein Mobahi, Jeffrey Pennington</p>
               <p class="light center">In ICML 2018 Workshop: Modern Trends in Nonconvex Optimization for Machine Learning</p>
+              <br>
+              <p class="center"><img src="images/curvature_regularization.png", style="width: 90%"></p>
               <br>
               <p>
                 Recent advances in high-performance computing and the abundance of large labeled datasets
@@ -205,14 +402,13 @@
 
       <div class="row">
         <div class="card horizontal">
-          <div class="card-image">
-            <img src="images/maze_goal.png", style="width: 300px">
-          </div>
           <div class="card-stacked">
             <div class="card-content">
               <h5 class="center">Automatic Goal Generation for Reinforcement Learning Agents</h5>
               <p class="center">Carlos Florensa*, David Held*, Xinyang Geng*, Pieter Abbeel</p>
               <p class="light center">In ICML, 2018.</p>
+              <br>
+              <p class="center"><img src="images/goal_gan.png", style="width: 90%"></p>
               <br>
               <p>
                 Reinforcement learning (RL) is a powerful technique to train an agent to perform a task; however,
@@ -247,14 +443,13 @@
 
       <div class="row">
         <div class="card horizontal">
-          <div class="card-image">
-            <img src="images/iColor.png", style="width: 300px">
-          </div>
           <div class="card-stacked">
             <div class="card-content">
               <h5 class="center">Real-Time User-Guided Image Colorization with Learned Deep Priors </h5>
               <p class="center">Richard Zhang*, Jun-Yan Zhu*, Phillip Isola, Xinyang Geng, Angela S. Lin, Tianhe Yu, Alexei A. Efros</p>
               <p class="light center">In SIGGRAPH 2017.</p>
+              <br>
+              <p class="center"><img src="images/icolor.png", style="width: 80%"></p>
               <br>
               <p>
                 We propose a deep learning approach for user-guided image colorization.
@@ -282,14 +477,13 @@
 
       <div class="row">
         <div class="card horizontal">
-          <div class="card-image">
-            <img src="images/superball.png", style="width: 300px">
-          </div>
           <div class="card-stacked">
             <div class="card-content">
               <h5 class="center">Deep Reinforcement Learning for Tensegrity Robot Locomotion</h5>
               <p class="center">Marvin Zhang*, Xinyang Geng*, Jonathan Bruce*, Ken Caluwaerts, Massimo Vespignani, Vytas SunSpiral, Pieter Abbeel, Sergey Levine</p>
               <p class="light center">In ICRA, 2017.</p>
+              <br>
+              <p class="center"><img src="images/superball.png", style="width: 75%"></p>
               <br>
               <p>
                 Tensegrity robots, composed of rigid rods connected by elastic cables, have a number of unique properties
