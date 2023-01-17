@@ -16,12 +16,14 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="#about">About Me</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#software">Software</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#about">About Me</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#software">Software</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -58,6 +60,59 @@
 
 
   <div class="container" style="max-width:860px">
+
+    <div class="section" id="software">
+      <h3 class="header center">Research Software</h3>
+
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5><a href="https://github.com/young-geng/EasyLM">EasyLM</a></h5>
+              <p style="font-size: 102%">
+                Easy to use model parallel large language models training and evaluation in
+                JAX/Flax with pjit support on cloud TPU pods.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5><a href="https://github.com/young-geng/m3ae_public">M3AE</a></h5>
+              <p style="font-size: 102%">
+                This is a JAX/Flax re-implementation for multimodal masked autoencoders
+                and regular masked autoencoders with support for large scale
+                data parallelism on cloud TPU pods.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5><a href="https://github.com/young-geng/JaxCQL">JaxCQL</a></h5>
+              <p style="font-size: 102%">
+                A simple and modular implementation of the conservative Q learning (CQL)
+                and soft actor critic (SAC) algorithm in JAX and Flax. Thanks to the jit
+                compilation of JAX, this implementation
+                is highly efficient, so that you can train an SAC agent in around 30
+                minutes and a CQL agent in around an hour.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
     <div class="section" id="publications">
 
       <h3 class="header center">Publications</h3>
