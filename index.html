@@ -30,11 +30,11 @@
     </div>
   </nav>
   <div class="section no-pad-bot" id="about">
-    <div class="container">
+    <div class="container" style="max-width:860px">
       <br><br>
       <h3 class="header center">About Me</h3>
       <div class="row">
-        <p class="col s12 m10 l8 offset-m1 offset-l2 caption" style="font-size: 105%">
+        <p class="col s12 m10 offset-m1 caption" style="font-size: 105%">
           I am currently a PhD student in UC Berkeley advised by Professor
           <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>.
           I am interetesed the intersectin between large scaled self-supervised
@@ -71,52 +71,52 @@
       <h3 class="header center">Research Software</h3>
 
       <div class="row">
-        <div class="card horizontal">
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5><a href="https://github.com/young-geng/EasyLM">EasyLM</a></h5>
-              <p style="font-size: 105%">
-                Easy to use model parallel large language models training and evaluation in
-                JAX/Flax with pjit support on cloud TPU pods.
-              </p>
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
+          <div class="card horizontal s4">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5><a href="https://github.com/young-geng/EasyLM">EasyLM</a></h5>
+                <p style="font-size: 105%">
+                  Easy to use model parallel large language models training and evaluation in
+                  JAX/Flax with pjit support on cloud TPU pods.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
+          <div class="card horizontal s4">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5><a href="https://github.com/young-geng/m3ae_public">M3AE</a></h5>
+                <p style="font-size: 102%">
+                  This is a JAX/Flax re-implementation for multimodal masked autoencoders
+                  and regular masked autoencoders with support for large scale
+                  data parallelism on cloud TPU pods.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
+          <div class="card horizontal s4">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5><a href="https://github.com/young-geng/JaxCQL">JaxCQL</a></h5>
+                <p style="font-size: 102%">
+                  A simple and modular implementation of the conservative Q learning (CQL)
+                  and soft actor critic (SAC) algorithm in JAX and Flax. Thanks to the jit
+                  compilation of JAX, this implementation
+                  is highly efficient, so that you can train an SAC agent in around 30
+                  minutes and a CQL agent in around an hour.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="card horizontal">
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5><a href="https://github.com/young-geng/m3ae_public">M3AE</a></h5>
-              <p style="font-size: 102%">
-                This is a JAX/Flax re-implementation for multimodal masked autoencoders
-                and regular masked autoencoders with support for large scale
-                data parallelism on cloud TPU pods.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="card horizontal">
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5><a href="https://github.com/young-geng/JaxCQL">JaxCQL</a></h5>
-              <p style="font-size: 102%">
-                A simple and modular implementation of the conservative Q learning (CQL)
-                and soft actor critic (SAC) algorithm in JAX and Flax. Thanks to the jit
-                compilation of JAX, this implementation
-                is highly efficient, so that you can train an SAC agent in around 30
-                minutes and a CQL agent in around an hour.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
     </div>
 
     <div class="section" id="publications">
@@ -162,9 +162,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -203,9 +201,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -245,9 +241,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -282,9 +276,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -323,9 +315,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -355,9 +345,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -383,10 +371,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -419,9 +404,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -457,10 +440,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -498,10 +478,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
@@ -532,10 +509,7 @@
             </div>
           </div>
         </div>
-      </div>
 
-
-      <div class="row">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
