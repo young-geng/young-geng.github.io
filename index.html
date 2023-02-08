@@ -182,7 +182,7 @@
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
-              <h5 class="center">FCM: Forgetful Causal Masking Makes Causal Language Models Better Zero-Shot Learners</h5>
+              <h5 class="center">Towards Better Few-Shot and Finetuning Performance with Forgetful Causal Language Models</h5>
               <p class="center">Hao Liu*, Xinyang Geng*, Lisa Lee, Igor Mordatch, Sergey Levine, Sharan Narang, Pieter Abbeel</p>
               <br>
               <p class="center"><img src="images/fcm.png", style="width: 75%"></p>
@@ -197,18 +197,11 @@
                 randomly selected past tokens masked out, we can improve the quality of the
                 learned representations for downstream language understanding tasks. We
                 hypothesize that randomly masking past tokens prevents over-attending to recent
-                tokens and encourages attention to tokens in the distant past. By randomly
-                masking input tokens in the PaLM model, we show that we can significantly
-                improve 1B and 8B PaLM's zero-shot performance on the SuperGLUE benchmark from
-                55.7 to 59.2 and from 61.6 to 64.0, respectively. Our largest 8B model matches
-                the score of PaLM with an average score of 64, despite the fact that PaLM is
-                trained on a much larger dataset (780B tokens) of high-quality conversation and
-                webpage data, while ours is trained on the smaller C4 dataset (180B tokens).
-                Experimental results show that our method also improves PaLM's zero and few-
-                shot performance on a diverse suite of tasks, including commonsense reasoning,
-                natural language inference and cloze completion. Moreover, we show that our
-                technique also helps representation learning, significantly improving PaLM's
-                finetuning results.
+                tokens and encourages attention to tokens in the distant past. We find that our
+                method, Forgetful Causal Masking (FCM), significantly improves both few-shot
+                and finetuning performance of PaLM. We further consider a simple extension,
+                T-FCM, which introduces bidirectional context to causal language model without
+                altering the sequence order, and further improves finetuning performance.
               </p>
             </div>
             <div class="card-action">
