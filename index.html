@@ -35,7 +35,8 @@
       <h3 class="header center">About Me</h3>
       <div class="row">
         <p class="col s12 m10 offset-m1 caption" style="font-size: 105%">
-          I've recently obtained my PhD from UC Berkeley, advised by Professor
+          I'm currently a research scientist at Google DeepMind.
+          I've obtained my PhD from UC Berkeley, advised by Professor
           <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>.
           I am interested in the infrastructure, data and modeling aspects of
           large-scale self-supervised learning. Specifically, my research focuses include
@@ -117,6 +118,27 @@
       <h3 class="header center">Research Software</h3>
 
       <div class="row">
+
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
+          <div class="card horizontal s4">
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5><a href="https://github.com/young-geng/scalax">Scalax</a></h5>
+                <p style="font-size: 105%">
+                  Scalax is a collection of utilties for helping developers to easily scale
+                  up JAX based machine learning models. The main idea of scalax is pretty
+                  simple: users write model and training code for a single GPU/TPU,
+                  and rely on scalax to automatically scale it up to hundreds of GPUs/TPUs.
+                  This is made possible by the JAX jit compiler, and scalax provides a set of
+                  utilities to help the users obtain the sharding annotations required by
+                  the jit compiler. Because scalax wraps around the jit compiler, existing
+                  JAX code can be easily scaled up using scalax with minimal changes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col s12 m10 offset-m1 l8 offset-l2">
           <div class="card horizontal s4">
             <div class="card-stacked">
@@ -146,37 +168,6 @@
           </div>
         </div>
 
-        <div class="col s12 m10 offset-m1 l8 offset-l2">
-          <div class="card horizontal s4">
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5><a href="https://github.com/young-geng/m3ae_public">M3AE</a></h5>
-                <p style="font-size: 102%">
-                  This is a JAX/Flax re-implementation for multimodal masked autoencoders
-                  and regular masked autoencoders with support for large scale
-                  data parallelism on cloud TPU pods.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m10 offset-m1 l8 offset-l2">
-          <div class="card horizontal s4">
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5><a href="https://github.com/young-geng/JaxCQL">JaxCQL</a></h5>
-                <p style="font-size: 102%">
-                  A simple and modular implementation of the conservative Q learning (CQL)
-                  and soft actor critic (SAC) algorithm in JAX and Flax. Thanks to the jit
-                  compilation of JAX, this implementation
-                  is highly efficient, so that you can train an SAC agent in around 30
-                  minutes and a CQL agent in around an hour.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
